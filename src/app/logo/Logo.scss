@@ -1,0 +1,7 @@
+@import "../../styles/main.scss";
+
+.logo {
+  color: $c-shark;
+
+  @include font-large;
+}

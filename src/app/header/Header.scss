@@ -1,0 +1,52 @@
+@import "../../styles/main.scss";
+
+.header {
+  width: 100%;
+  height: 248px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 0 $gap-xlarge;
+  background: $c-white;
+
+  @media only screen and (min-width: $breakpoints-md) {
+    height: 144px;
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 1224px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-bottom: $gap-xlarge;
+
+    @media only screen and (min-width: $breakpoints-md) {
+      margin-bottom: 0;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__login {
+    height: 38px;
+    position: absolute;
+    top: 18%;
+    padding: $gap-small $gap-xlarge;
+    right: $gap-xlarge;
+    text-decoration: none;
+    border-radius: $border-radius-small;
+    border: $border-blue;
+    color: $c-blue-light;
+
+    @include font-small;
+
+    @media only screen and (min-width: $breakpoints-md) {
+      position: relative;
+      top: auto;
+      right: auto;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+/* Wrappers
+************************************************************** */
+
+$wrapper: 1272px;
+$wrapper-wide: 1920px;
+
+/* Paddings, Margins
+************************************************************** */
+
+$gap-xxsmall: 4px;
+$gap-xsmall: 8px;
+$gap-small: 12px;
+$gap-regular: 16px;
+$gap-large: 20px;
+$gap-xlarge: 24px;
+$gap-xxlarge: 32px;
+$gap-huge: 56px;
+
+/* Breakpoints
+************************************************************** */
+
+$breakpoints-xxs: 320px;
+$breakpoints-xs: 480px;
+$breakpoints-sm: 576px;
+$breakpoints-md: 768px;
+$breakpoints-lg: 992px;
+$breakpoints-xl: 1200px;
+
+/* Borders
+************************************************************** */
+
+$border-grey: 1px solid $c-athens-grey;
+$border-blue: 1px solid $c-blue-light;
+$border-grey-large: 4px solid $c-athens-grey;
+$border-blue-large: 4px solid $c-blue-light;
+$border-radius-small: 4px;
+$border-radius-large: 8px;
+
+/* Z-index
+************************************************************** */
+
+$z-index: 2;

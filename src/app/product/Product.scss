@@ -1,0 +1,130 @@
+@import "../../styles/main.scss";
+
+.product {
+  width: 100%;
+  min-height: 405px;
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  opacity: 1;
+  transition: height 0.25s, opacity 0.25s;
+  border-radius: $border-radius-large;
+  background: $c-white;
+
+  @media only screen and (min-width: $breakpoints-xxs) {
+    min-height: 400px;
+  }
+
+  @media only screen and (min-width: $breakpoints-sm) {
+    min-height: 480px;
+  }
+
+  @media only screen and (min-width: $breakpoints-md) {
+    min-height: 400px;
+  }
+
+  &--show {
+    height: auto;
+    opacity: 1;
+  }
+
+  &__loader {
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    top: 16%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border: $border-grey-large;
+    border-top: $border-blue-large;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+  }
+
+  &__image {
+    max-height: 170px;
+    object-fit: cover;
+
+    @media only screen and (min-width: $breakpoints-sm) {
+      max-height: 250px;
+    }
+
+    @media only screen and (min-width: $breakpoints-md) {
+      max-height: 170px;
+    }
+  }
+
+  &__container {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: $gap-regular $gap-regular $gap-xlarge;
+  }
+
+  &__name {
+    margin: 0;
+
+    @include font-regular;
+  }
+
+  &__description {
+    min-height: 64px;
+    margin: $gap-xsmall 0;
+    color: $c-manatee;
+
+    @include font-small;
+  }
+
+  &__badge {
+    position: absolute;
+    top: $gap-regular;
+    left: 0;
+    padding: $gap-xxsmall $gap-regular;
+    z-index: $z-index;
+    background-color: $c-orange;
+    color: $c-white;
+
+    @include font-small;
+  }
+
+  &__ratings {
+    margin-top: $gap-large;
+
+    .MuiRating {
+      &-root {
+        color: $c-orange;
+
+        span {
+          transform: scale(0.9);
+        }
+      }
+
+      &-iconEmpty {
+        color: $c-manatee;
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+    height: 38px;
+    margin-top: $gap-small;
+
+    @include font-small;
+    @include button;
+    @include button-primary;
+  }
+
+  &--disactive {
+    .product {
+      &__image {
+        filter: grayscale(100%);
+        opacity: 0.5;
+      }
+      &__button {
+        @include button-disactive;
+      }
+    }
+  }
+}

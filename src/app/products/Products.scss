@@ -1,0 +1,57 @@
+@import "../../styles/main.scss";
+
+.products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    width: 100%;
+    max-width: $wrapper;
+    display: grid;
+    grid-column-gap: $gap-xlarge;
+    grid-row-gap: $gap-xlarge;
+    margin: $gap-xlarge auto;
+    padding: 0 $gap-xlarge;
+
+    @media only screen and (min-width: $breakpoints-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media only screen and (min-width: $breakpoints-xl) {
+      margin: $gap-huge auto;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    margin-bottom: $gap-huge;
+
+    .MuiPaginationItem-page {
+      &:hover {
+        background: transparent;
+      }
+      &.Mui-selected {
+        color: $c-blue-light;
+        background: transparent;
+
+        &:hover {
+          background: transparent;
+        }
+      }
+    }
+  }
+
+  &__button {
+    margin: 0 $gap-regular;
+    cursor: pointer;
+    background-color: transparent;
+
+    &--disabled {
+      cursor: default;
+      color: $c-manatee;
+    }
+  }
+}

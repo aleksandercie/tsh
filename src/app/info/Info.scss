@@ -1,0 +1,44 @@
+@import "../../styles/main.scss";
+
+.info {
+  width: 100%;
+  padding: $gap-xlarge;
+
+  @media only screen and (min-width: $breakpoints-lg) {
+    padding: $gap-huge $gap-xlarge;
+  }
+
+  &__container {
+    max-width: 600px;
+    height: 344px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: $border-radius-large;
+    background: $c-white;
+  }
+
+  &__icon {
+    justify-content: center;
+
+    svg {
+      max-height: 45px;
+      max-width: 36px;
+    }
+  }
+
+  &__title {
+    margin: $gap-xlarge auto 0;
+
+    @include font-regular;
+  }
+
+  &__subtitle {
+    margin: $gap-xsmall auto 0;
+    color: $c-manatee;
+
+    @include font-small;
+  }
+}
