@@ -48,6 +48,7 @@
     margin: 0 $gap-regular;
     cursor: pointer;
     background-color: transparent;
+    color: $c-shark;
 
     &--disabled {
       cursor: default;
