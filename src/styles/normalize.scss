@@ -33,4 +33,7 @@ img {
 button {
   padding: 0;
   border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
